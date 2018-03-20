@@ -2,27 +2,247 @@
 
 exports[`defaults - snapshot 1`] = `
 <Async
+  backspaceRemovesValue={true}
+  blurInputOnSelect={[MockFunction]}
   cacheOptions={false}
+  captureMenuScroll={[MockFunction]}
+  closeMenuOnSelect={true}
+  components={
+    Object {
+      "ClearIndicator": [Function],
+      "Control": [Function],
+      "DropdownIndicator": [Function],
+      "Group": [Function],
+      "GroupHeading": [Function],
+      "IndicatorSeparator": [Function],
+      "IndicatorsContainer": [Function],
+      "Input": [Function],
+      "LoadingIndicator": [Function],
+      "LoadingMessage": [Function],
+      "Menu": [Function],
+      "MenuList": [Function],
+      "MenuPortal": [Function],
+      "MultiValue": [Function],
+      "MultiValueContainer": [Function],
+      "MultiValueLabel": [Function],
+      "MultiValueRemove": [Function],
+      "NoOptionsMessage": [Function],
+      "Option": [Function],
+      "Placeholder": [Function],
+      "SelectContainer": [Function],
+      "SingleValue": [Function],
+      "ValueContainer": [Function],
+    }
+  }
   defaultOptions={false}
+  escapeClearsValue={false}
+  filterOption={[MockFunction]}
+  formatGroupLabel={[Function]}
+  getOptionLabel={[Function]}
+  getOptionValue={[Function]}
+  hideSelectedOptions={true}
+  inputValue=""
+  isDisabled={false}
+  isLoading={false}
+  isMulti={false}
+  isOptionDisabled={[MockFunction]}
+  isRtl={false}
+  isSearchable={true}
+  loadOptions={[MockFunction]}
+  loadingMessage={[Function]}
+  maxMenuHeight={300}
+  maxValueHeight={100}
+  menuIsOpen={false}
+  menuPlacement="bottom"
+  minMenuHeight={140}
+  noOptionsMessage={[Function]}
+  onChange={[MockFunction]}
+  onInputChange={[MockFunction]}
+  onMenuClose={[MockFunction]}
+  onMenuOpen={[MockFunction]}
+  options={
+    Array [
+      Object {
+        "label": "0",
+        "value": "zero",
+      },
+      Object {
+        "label": "1",
+        "value": "one",
+      },
+      Object {
+        "label": "2",
+        "value": "two",
+      },
+      Object {
+        "label": "3",
+        "value": "three",
+      },
+      Object {
+        "label": "4",
+        "value": "four",
+      },
+      Object {
+        "label": "5",
+        "value": "five",
+      },
+      Object {
+        "label": "6",
+        "value": "six",
+      },
+      Object {
+        "label": "7",
+        "value": "seven",
+      },
+      Object {
+        "label": "8",
+        "value": "eight",
+      },
+      Object {
+        "label": "9",
+        "value": "nine",
+      },
+      Object {
+        "label": "10",
+        "value": "ten",
+      },
+      Object {
+        "label": "11",
+        "value": "eleven",
+      },
+      Object {
+        "label": "12",
+        "value": "twelve",
+      },
+      Object {
+        "label": "13",
+        "value": "thirteen",
+      },
+      Object {
+        "label": "14",
+        "value": "fourteen",
+      },
+      Object {
+        "label": "15",
+        "value": "fifteen",
+      },
+      Object {
+        "label": "16",
+        "value": "sixteen",
+      },
+    ]
+  }
+  pageSize={5}
+  placeholder="Select..."
+  screenReaderStatus={[Function]}
+  scrollMenuIntoView={[MockFunction]}
+  styles={Object {}}
+  tabSelectsValue={true}
+  value={Array []}
 >
   <StateManager
+    backspaceRemovesValue={true}
+    blurInputOnSelect={[MockFunction]}
     cacheOptions={false}
+    captureMenuScroll={[MockFunction]}
+    closeMenuOnSelect={true}
+    components={
+      Object {
+        "ClearIndicator": [Function],
+        "Control": [Function],
+        "DropdownIndicator": [Function],
+        "Group": [Function],
+        "GroupHeading": [Function],
+        "IndicatorSeparator": [Function],
+        "IndicatorsContainer": [Function],
+        "Input": [Function],
+        "LoadingIndicator": [Function],
+        "LoadingMessage": [Function],
+        "Menu": [Function],
+        "MenuList": [Function],
+        "MenuPortal": [Function],
+        "MultiValue": [Function],
+        "MultiValueContainer": [Function],
+        "MultiValueLabel": [Function],
+        "MultiValueRemove": [Function],
+        "NoOptionsMessage": [Function],
+        "Option": [Function],
+        "Placeholder": [Function],
+        "SelectContainer": [Function],
+        "SingleValue": [Function],
+        "ValueContainer": [Function],
+      }
+    }
     defaultInputValue=""
     defaultMenuIsOpen={false}
     defaultOptions={false}
     defaultValue={null}
+    escapeClearsValue={false}
     filterOption={null}
+    formatGroupLabel={[Function]}
+    getOptionLabel={[Function]}
+    getOptionValue={[Function]}
+    hideSelectedOptions={true}
+    inputValue=""
+    isDisabled={false}
     isLoading={false}
+    isMulti={false}
+    isOptionDisabled={[MockFunction]}
+    isRtl={false}
+    isSearchable={true}
+    loadingMessage={[Function]}
+    maxMenuHeight={300}
+    maxValueHeight={100}
+    menuIsOpen={false}
+    menuPlacement="bottom"
+    minMenuHeight={140}
+    noOptionsMessage={[Function]}
+    onChange={[MockFunction]}
     onInputChange={[Function]}
+    onMenuClose={[MockFunction]}
+    onMenuOpen={[MockFunction]}
     options={Array []}
+    pageSize={5}
+    placeholder="Select..."
+    screenReaderStatus={[Function]}
+    scrollMenuIntoView={[MockFunction]}
+    styles={Object {}}
+    tabSelectsValue={true}
+    value={Array []}
   >
     <Select
       backspaceRemovesValue={true}
-      blurInputOnSelect={true}
+      blurInputOnSelect={[MockFunction]}
       cacheOptions={false}
-      captureMenuScroll={false}
+      captureMenuScroll={[MockFunction]}
       closeMenuOnSelect={true}
-      components={Object {}}
+      components={
+        Object {
+          "ClearIndicator": [Function],
+          "Control": [Function],
+          "DropdownIndicator": [Function],
+          "Group": [Function],
+          "GroupHeading": [Function],
+          "IndicatorSeparator": [Function],
+          "IndicatorsContainer": [Function],
+          "Input": [Function],
+          "LoadingIndicator": [Function],
+          "LoadingMessage": [Function],
+          "Menu": [Function],
+          "MenuList": [Function],
+          "MenuPortal": [Function],
+          "MultiValue": [Function],
+          "MultiValueContainer": [Function],
+          "MultiValueLabel": [Function],
+          "MultiValueRemove": [Function],
+          "NoOptionsMessage": [Function],
+          "Option": [Function],
+          "Placeholder": [Function],
+          "SelectContainer": [Function],
+          "SingleValue": [Function],
+          "ValueContainer": [Function],
+        }
+      }
       defaultInputValue=""
       defaultMenuIsOpen={false}
       defaultOptions={false}
@@ -37,7 +257,7 @@ exports[`defaults - snapshot 1`] = `
       isDisabled={false}
       isLoading={false}
       isMulti={false}
-      isOptionDisabled={[Function]}
+      isOptionDisabled={[MockFunction]}
       isRtl={false}
       isSearchable={true}
       loadingMessage={[Function]}
@@ -55,10 +275,10 @@ exports[`defaults - snapshot 1`] = `
       pageSize={5}
       placeholder="Select..."
       screenReaderStatus={[Function]}
-      scrollMenuIntoView={true}
+      scrollMenuIntoView={[MockFunction]}
       styles={Object {}}
       tabSelectsValue={true}
-      value={null}
+      value={Array []}
     >
       <SelectContainer
         clearValue={[Function]}
@@ -79,11 +299,35 @@ exports[`defaults - snapshot 1`] = `
         selectProps={
           Object {
             "backspaceRemovesValue": true,
-            "blurInputOnSelect": true,
+            "blurInputOnSelect": [MockFunction],
             "cacheOptions": false,
-            "captureMenuScroll": false,
+            "captureMenuScroll": [MockFunction],
             "closeMenuOnSelect": true,
-            "components": Object {},
+            "components": Object {
+              "ClearIndicator": [Function],
+              "Control": [Function],
+              "DropdownIndicator": [Function],
+              "Group": [Function],
+              "GroupHeading": [Function],
+              "IndicatorSeparator": [Function],
+              "IndicatorsContainer": [Function],
+              "Input": [Function],
+              "LoadingIndicator": [Function],
+              "LoadingMessage": [Function],
+              "Menu": [Function],
+              "MenuList": [Function],
+              "MenuPortal": [Function],
+              "MultiValue": [Function],
+              "MultiValueContainer": [Function],
+              "MultiValueLabel": [Function],
+              "MultiValueRemove": [Function],
+              "NoOptionsMessage": [Function],
+              "Option": [Function],
+              "Placeholder": [Function],
+              "SelectContainer": [Function],
+              "SingleValue": [Function],
+              "ValueContainer": [Function],
+            },
             "defaultInputValue": "",
             "defaultMenuIsOpen": false,
             "defaultOptions": false,
@@ -98,7 +342,7 @@ exports[`defaults - snapshot 1`] = `
             "isDisabled": false,
             "isLoading": false,
             "isMulti": false,
-            "isOptionDisabled": [Function],
+            "isOptionDisabled": [MockFunction],
             "isRtl": false,
             "isSearchable": true,
             "loadingMessage": [Function],
@@ -116,10 +360,10 @@ exports[`defaults - snapshot 1`] = `
             "pageSize": 5,
             "placeholder": "Select...",
             "screenReaderStatus": [Function],
-            "scrollMenuIntoView": true,
+            "scrollMenuIntoView": [MockFunction],
             "styles": Object {},
             "tabSelectsValue": true,
-            "value": null,
+            "value": Array [],
           }
         }
         setValue={[Function]}
@@ -202,11 +446,35 @@ exports[`defaults - snapshot 1`] = `
                 selectProps={
                   Object {
                     "backspaceRemovesValue": true,
-                    "blurInputOnSelect": true,
+                    "blurInputOnSelect": [MockFunction],
                     "cacheOptions": false,
-                    "captureMenuScroll": false,
+                    "captureMenuScroll": [MockFunction],
                     "closeMenuOnSelect": true,
-                    "components": Object {},
+                    "components": Object {
+                      "ClearIndicator": [Function],
+                      "Control": [Function],
+                      "DropdownIndicator": [Function],
+                      "Group": [Function],
+                      "GroupHeading": [Function],
+                      "IndicatorSeparator": [Function],
+                      "IndicatorsContainer": [Function],
+                      "Input": [Function],
+                      "LoadingIndicator": [Function],
+                      "LoadingMessage": [Function],
+                      "Menu": [Function],
+                      "MenuList": [Function],
+                      "MenuPortal": [Function],
+                      "MultiValue": [Function],
+                      "MultiValueContainer": [Function],
+                      "MultiValueLabel": [Function],
+                      "MultiValueRemove": [Function],
+                      "NoOptionsMessage": [Function],
+                      "Option": [Function],
+                      "Placeholder": [Function],
+                      "SelectContainer": [Function],
+                      "SingleValue": [Function],
+                      "ValueContainer": [Function],
+                    },
                     "defaultInputValue": "",
                     "defaultMenuIsOpen": false,
                     "defaultOptions": false,
@@ -221,7 +489,7 @@ exports[`defaults - snapshot 1`] = `
                     "isDisabled": false,
                     "isLoading": false,
                     "isMulti": false,
-                    "isOptionDisabled": [Function],
+                    "isOptionDisabled": [MockFunction],
                     "isRtl": false,
                     "isSearchable": true,
                     "loadingMessage": [Function],
@@ -239,10 +507,10 @@ exports[`defaults - snapshot 1`] = `
                     "pageSize": 5,
                     "placeholder": "Select...",
                     "screenReaderStatus": [Function],
-                    "scrollMenuIntoView": true,
+                    "scrollMenuIntoView": [MockFunction],
                     "styles": Object {},
                     "tabSelectsValue": true,
-                    "value": null,
+                    "value": Array [],
                   }
                 }
                 setValue={[Function]}
@@ -321,11 +589,35 @@ exports[`defaults - snapshot 1`] = `
                         selectProps={
                           Object {
                             "backspaceRemovesValue": true,
-                            "blurInputOnSelect": true,
+                            "blurInputOnSelect": [MockFunction],
                             "cacheOptions": false,
-                            "captureMenuScroll": false,
+                            "captureMenuScroll": [MockFunction],
                             "closeMenuOnSelect": true,
-                            "components": Object {},
+                            "components": Object {
+                              "ClearIndicator": [Function],
+                              "Control": [Function],
+                              "DropdownIndicator": [Function],
+                              "Group": [Function],
+                              "GroupHeading": [Function],
+                              "IndicatorSeparator": [Function],
+                              "IndicatorsContainer": [Function],
+                              "Input": [Function],
+                              "LoadingIndicator": [Function],
+                              "LoadingMessage": [Function],
+                              "Menu": [Function],
+                              "MenuList": [Function],
+                              "MenuPortal": [Function],
+                              "MultiValue": [Function],
+                              "MultiValueContainer": [Function],
+                              "MultiValueLabel": [Function],
+                              "MultiValueRemove": [Function],
+                              "NoOptionsMessage": [Function],
+                              "Option": [Function],
+                              "Placeholder": [Function],
+                              "SelectContainer": [Function],
+                              "SingleValue": [Function],
+                              "ValueContainer": [Function],
+                            },
                             "defaultInputValue": "",
                             "defaultMenuIsOpen": false,
                             "defaultOptions": false,
@@ -340,7 +632,7 @@ exports[`defaults - snapshot 1`] = `
                             "isDisabled": false,
                             "isLoading": false,
                             "isMulti": false,
-                            "isOptionDisabled": [Function],
+                            "isOptionDisabled": [MockFunction],
                             "isRtl": false,
                             "isSearchable": true,
                             "loadingMessage": [Function],
@@ -358,10 +650,10 @@ exports[`defaults - snapshot 1`] = `
                             "pageSize": 5,
                             "placeholder": "Select...",
                             "screenReaderStatus": [Function],
-                            "scrollMenuIntoView": true,
+                            "scrollMenuIntoView": [MockFunction],
                             "styles": Object {},
                             "tabSelectsValue": true,
-                            "value": null,
+                            "value": Array [],
                           }
                         }
                         setValue={[Function]}
@@ -417,11 +709,35 @@ exports[`defaults - snapshot 1`] = `
                                 selectProps={
                                   Object {
                                     "backspaceRemovesValue": true,
-                                    "blurInputOnSelect": true,
+                                    "blurInputOnSelect": [MockFunction],
                                     "cacheOptions": false,
-                                    "captureMenuScroll": false,
+                                    "captureMenuScroll": [MockFunction],
                                     "closeMenuOnSelect": true,
-                                    "components": Object {},
+                                    "components": Object {
+                                      "ClearIndicator": [Function],
+                                      "Control": [Function],
+                                      "DropdownIndicator": [Function],
+                                      "Group": [Function],
+                                      "GroupHeading": [Function],
+                                      "IndicatorSeparator": [Function],
+                                      "IndicatorsContainer": [Function],
+                                      "Input": [Function],
+                                      "LoadingIndicator": [Function],
+                                      "LoadingMessage": [Function],
+                                      "Menu": [Function],
+                                      "MenuList": [Function],
+                                      "MenuPortal": [Function],
+                                      "MultiValue": [Function],
+                                      "MultiValueContainer": [Function],
+                                      "MultiValueLabel": [Function],
+                                      "MultiValueRemove": [Function],
+                                      "NoOptionsMessage": [Function],
+                                      "Option": [Function],
+                                      "Placeholder": [Function],
+                                      "SelectContainer": [Function],
+                                      "SingleValue": [Function],
+                                      "ValueContainer": [Function],
+                                    },
                                     "defaultInputValue": "",
                                     "defaultMenuIsOpen": false,
                                     "defaultOptions": false,
@@ -436,7 +752,7 @@ exports[`defaults - snapshot 1`] = `
                                     "isDisabled": false,
                                     "isLoading": false,
                                     "isMulti": false,
-                                    "isOptionDisabled": [Function],
+                                    "isOptionDisabled": [MockFunction],
                                     "isRtl": false,
                                     "isSearchable": true,
                                     "loadingMessage": [Function],
@@ -454,10 +770,10 @@ exports[`defaults - snapshot 1`] = `
                                     "pageSize": 5,
                                     "placeholder": "Select...",
                                     "screenReaderStatus": [Function],
-                                    "scrollMenuIntoView": true,
+                                    "scrollMenuIntoView": [MockFunction],
                                     "styles": Object {},
                                     "tabSelectsValue": true,
-                                    "value": null,
+                                    "value": Array [],
                                   }
                                 }
                                 setValue={[Function]}
@@ -645,11 +961,35 @@ exports[`defaults - snapshot 1`] = `
                         selectProps={
                           Object {
                             "backspaceRemovesValue": true,
-                            "blurInputOnSelect": true,
+                            "blurInputOnSelect": [MockFunction],
                             "cacheOptions": false,
-                            "captureMenuScroll": false,
+                            "captureMenuScroll": [MockFunction],
                             "closeMenuOnSelect": true,
-                            "components": Object {},
+                            "components": Object {
+                              "ClearIndicator": [Function],
+                              "Control": [Function],
+                              "DropdownIndicator": [Function],
+                              "Group": [Function],
+                              "GroupHeading": [Function],
+                              "IndicatorSeparator": [Function],
+                              "IndicatorsContainer": [Function],
+                              "Input": [Function],
+                              "LoadingIndicator": [Function],
+                              "LoadingMessage": [Function],
+                              "Menu": [Function],
+                              "MenuList": [Function],
+                              "MenuPortal": [Function],
+                              "MultiValue": [Function],
+                              "MultiValueContainer": [Function],
+                              "MultiValueLabel": [Function],
+                              "MultiValueRemove": [Function],
+                              "NoOptionsMessage": [Function],
+                              "Option": [Function],
+                              "Placeholder": [Function],
+                              "SelectContainer": [Function],
+                              "SingleValue": [Function],
+                              "ValueContainer": [Function],
+                            },
                             "defaultInputValue": "",
                             "defaultMenuIsOpen": false,
                             "defaultOptions": false,
@@ -664,7 +1004,7 @@ exports[`defaults - snapshot 1`] = `
                             "isDisabled": false,
                             "isLoading": false,
                             "isMulti": false,
-                            "isOptionDisabled": [Function],
+                            "isOptionDisabled": [MockFunction],
                             "isRtl": false,
                             "isSearchable": true,
                             "loadingMessage": [Function],
@@ -682,10 +1022,10 @@ exports[`defaults - snapshot 1`] = `
                             "pageSize": 5,
                             "placeholder": "Select...",
                             "screenReaderStatus": [Function],
-                            "scrollMenuIntoView": true,
+                            "scrollMenuIntoView": [MockFunction],
                             "styles": Object {},
                             "tabSelectsValue": true,
-                            "value": null,
+                            "value": Array [],
                           }
                         }
                         setValue={[Function]}
@@ -736,11 +1076,35 @@ exports[`defaults - snapshot 1`] = `
                                 selectProps={
                                   Object {
                                     "backspaceRemovesValue": true,
-                                    "blurInputOnSelect": true,
+                                    "blurInputOnSelect": [MockFunction],
                                     "cacheOptions": false,
-                                    "captureMenuScroll": false,
+                                    "captureMenuScroll": [MockFunction],
                                     "closeMenuOnSelect": true,
-                                    "components": Object {},
+                                    "components": Object {
+                                      "ClearIndicator": [Function],
+                                      "Control": [Function],
+                                      "DropdownIndicator": [Function],
+                                      "Group": [Function],
+                                      "GroupHeading": [Function],
+                                      "IndicatorSeparator": [Function],
+                                      "IndicatorsContainer": [Function],
+                                      "Input": [Function],
+                                      "LoadingIndicator": [Function],
+                                      "LoadingMessage": [Function],
+                                      "Menu": [Function],
+                                      "MenuList": [Function],
+                                      "MenuPortal": [Function],
+                                      "MultiValue": [Function],
+                                      "MultiValueContainer": [Function],
+                                      "MultiValueLabel": [Function],
+                                      "MultiValueRemove": [Function],
+                                      "NoOptionsMessage": [Function],
+                                      "Option": [Function],
+                                      "Placeholder": [Function],
+                                      "SelectContainer": [Function],
+                                      "SingleValue": [Function],
+                                      "ValueContainer": [Function],
+                                    },
                                     "defaultInputValue": "",
                                     "defaultMenuIsOpen": false,
                                     "defaultOptions": false,
@@ -755,7 +1119,7 @@ exports[`defaults - snapshot 1`] = `
                                     "isDisabled": false,
                                     "isLoading": false,
                                     "isMulti": false,
-                                    "isOptionDisabled": [Function],
+                                    "isOptionDisabled": [MockFunction],
                                     "isRtl": false,
                                     "isSearchable": true,
                                     "loadingMessage": [Function],
@@ -773,10 +1137,10 @@ exports[`defaults - snapshot 1`] = `
                                     "pageSize": 5,
                                     "placeholder": "Select...",
                                     "screenReaderStatus": [Function],
-                                    "scrollMenuIntoView": true,
+                                    "scrollMenuIntoView": [MockFunction],
                                     "styles": Object {},
                                     "tabSelectsValue": true,
-                                    "value": null,
+                                    "value": Array [],
                                   }
                                 }
                                 setValue={[Function]}
@@ -826,11 +1190,35 @@ exports[`defaults - snapshot 1`] = `
                                 selectProps={
                                   Object {
                                     "backspaceRemovesValue": true,
-                                    "blurInputOnSelect": true,
+                                    "blurInputOnSelect": [MockFunction],
                                     "cacheOptions": false,
-                                    "captureMenuScroll": false,
+                                    "captureMenuScroll": [MockFunction],
                                     "closeMenuOnSelect": true,
-                                    "components": Object {},
+                                    "components": Object {
+                                      "ClearIndicator": [Function],
+                                      "Control": [Function],
+                                      "DropdownIndicator": [Function],
+                                      "Group": [Function],
+                                      "GroupHeading": [Function],
+                                      "IndicatorSeparator": [Function],
+                                      "IndicatorsContainer": [Function],
+                                      "Input": [Function],
+                                      "LoadingIndicator": [Function],
+                                      "LoadingMessage": [Function],
+                                      "Menu": [Function],
+                                      "MenuList": [Function],
+                                      "MenuPortal": [Function],
+                                      "MultiValue": [Function],
+                                      "MultiValueContainer": [Function],
+                                      "MultiValueLabel": [Function],
+                                      "MultiValueRemove": [Function],
+                                      "NoOptionsMessage": [Function],
+                                      "Option": [Function],
+                                      "Placeholder": [Function],
+                                      "SelectContainer": [Function],
+                                      "SingleValue": [Function],
+                                      "ValueContainer": [Function],
+                                    },
                                     "defaultInputValue": "",
                                     "defaultMenuIsOpen": false,
                                     "defaultOptions": false,
@@ -845,7 +1233,7 @@ exports[`defaults - snapshot 1`] = `
                                     "isDisabled": false,
                                     "isLoading": false,
                                     "isMulti": false,
-                                    "isOptionDisabled": [Function],
+                                    "isOptionDisabled": [MockFunction],
                                     "isRtl": false,
                                     "isSearchable": true,
                                     "loadingMessage": [Function],
@@ -863,10 +1251,10 @@ exports[`defaults - snapshot 1`] = `
                                     "pageSize": 5,
                                     "placeholder": "Select...",
                                     "screenReaderStatus": [Function],
-                                    "scrollMenuIntoView": true,
+                                    "scrollMenuIntoView": [MockFunction],
                                     "styles": Object {},
                                     "tabSelectsValue": true,
-                                    "value": null,
+                                    "value": Array [],
                                   }
                                 }
                                 setValue={[Function]}

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -7,9 +8,49 @@ import Async from '../Async';
 import { OPTIONS } from './constants';
 import { components } from '../components';
 const { Option } = components;
+const BASIC_PROPS = {
+  components,
+  backspaceRemovesValue: true,
+  blurInputOnSelect: jest.fn(),
+  captureMenuScroll: jest.fn(),
+  closeMenuOnSelect: true,
+  escapeClearsValue: false,
+  filterOption: jest.fn(),
+  formatGroupLabel: (group) => group.label,
+  getOptionLabel: (option) => option.label,
+  getOptionValue: (option) => option.value,
+  hideSelectedOptions: true,
+  inputValue: '',
+  isDisabled: false,
+  isLoading: false,
+  isMulti: false,
+  isOptionDisabled: jest.fn(() => false),
+  isRtl: false,
+  isSearchable: true,
+  loadOptions: jest.fn(),
+  loadingMessage: () => 'Loading...',
+  maxMenuHeight: 300,
+  maxValueHeight: 100,
+  menuIsOpen: false,
+  menuPlacement: 'bottom',
+  minMenuHeight: 140,
+  noOptionsMessage: () => 'No options',
+  onChange: jest.fn(),
+  onInputChange: jest.fn(),
+  onMenuClose: jest.fn(),
+  onMenuOpen: jest.fn(),
+  options: OPTIONS,
+  pageSize: 5,
+  placeholder: 'Select...',
+  screenReaderStatus: ({ count }: { count: number }) => `${count} result${count !== 1 ? 's' : ''} available.`,
+  scrollMenuIntoView: jest.fn(),
+  styles: {},
+  tabSelectsValue: true,
+  value: [],
+}
 
 test('defaults - snapshot', () => {
-  const tree = mount(<Async />);
+  const tree = mount(<Async {...BASIC_PROPS}/>);
   expect(toJson(tree)).toMatchSnapshot();
 });
 
@@ -19,21 +60,25 @@ test('defaults - snapshot', () => {
  * but still loading options is rendered
  */
 cases('load option prop with defaultOptions true', ({ props, expectOptionLength }) => {
-  const asyncSelectWrapper = mount(<Async menuIsOpen {...props} />);
+  const asyncSelectWrapper = mount(<Async {...props} />);
   expect(asyncSelectWrapper.find(Option).length).toBe(expectOptionLength);
 }, {
   'with callback  > should resolve options': {
     props: {
+      ...BASIC_PROPS,
       defaultOptions: true,
       loadOptions: (inputValue, callBack) => callBack([OPTIONS[0]]),
+      menuIsOpen: true,
     },
     expectOptionLength: 1,
   },
   'with promise  > should resolve options': {
     skip: true,
     props: {
+      ...BASIC_PROPS,
       defaultOptions: true,
       loadOptions: () => Promise.resolve([OPTIONS[0]]),
+      menuIsOpen: true,
     },
     expectOptionLength: 1,
   }
@@ -53,14 +98,18 @@ cases('load options props with', ({ props, expectloadOptionsLength }) => {
 }, {
   'with callback > should resolve the options': {
     props: {
+      ...BASIC_PROPS,
       loadOptions: (inputValue, callBack) => callBack(OPTIONS),
+      menuIsOpen: true,
     },
     expectloadOptionsLength: 17,
   },
   'with promise > should resolve the options': {
     skip: true,
     props: {
+      ...BASIC_PROPS,
       loadOptions: () => Promise.resolve(OPTIONS),
+      menuIsOpen: true,
     },
     expectloadOptionsLength: 17,
   }
@@ -72,7 +121,8 @@ cases('load options props with', ({ props, expectloadOptionsLength }) => {
  */
 test.skip('to not call loadOptions again for same value when cacheOptions is true', () => {
   let loadOptionsSpy = jest.fn();
-  let asyncSelectWrapper = mount(<Async loadOptions={loadOptionsSpy} cacheOptions />);
+  const props = {...BASIC_PROPS, loadOptions: loadOptionsSpy, cacheOptions: true};
+  let asyncSelectWrapper = mount(<Async {...props} />);
   let inputValueWrapper = asyncSelectWrapper.find('div.react-select__input input');
 
   asyncSelectWrapper.setProps({ inputValue: 'a' });
@@ -89,10 +139,11 @@ test.skip('to not call loadOptions again for same value when cacheOptions is tru
 });
 
 test('to create new cache for each instance', () => {
-  const asyncSelectWrapper = mount(<Async cacheOptions />);
+  const props = {...BASIC_PROPS, cacheOptions: true};
+  const asyncSelectWrapper = mount(<Async {...props} />);
   const instanceOne = asyncSelectWrapper.instance();
 
-  const asyncSelectTwoWrapper = mount(<Async cacheOptions />);
+  const asyncSelectTwoWrapper = mount(<Async {...props} />);
   const instanceTwo = asyncSelectTwoWrapper.instance();
 
   expect(instanceOne.optionsCache).not.toBe(instanceTwo.optionsCache);
@@ -101,7 +152,8 @@ test('to create new cache for each instance', () => {
 test('in case of callbacks display the most recently-requested loaded options (if results are returned out of order)', () => {
   let callbacks = [];
   const loadOptions = (inputValue, callback) => { callbacks.push(callback); };
-  let asyncSelectWrapper = mount(<Async loadOptions={loadOptions} />);
+  const props = {...BASIC_PROPS, loadOptions, menuIsOpen: true};
+  let asyncSelectWrapper = mount(<Async {...props} />);
   let inputValueWrapper = asyncSelectWrapper.find('div.react-select__input input');
   asyncSelectWrapper.setProps({ inputValue: 'foo' });
   inputValueWrapper.simulate('change', { currentTarget: { value: 'foo' } });
@@ -119,7 +171,8 @@ test('in case of callbacks display the most recently-requested loaded options (i
  */
 test.skip('in case of callbacks should handle an error by setting options to an empty array', () => {
   const loadOptions = (inputValue, callback) => { callback(new Error('error')); };
-  let asyncSelectWrapper = mount(<Async loadOptions={loadOptions} options={OPTIONS} />);
+  const props = {...BASIC_PROPS, loadOptions};
+  let asyncSelectWrapper = mount(<Async {...props} />);
   let inputValueWrapper = asyncSelectWrapper.find('div.react-select__input input');
   asyncSelectWrapper.setProps({ inputValue: 'foo' });
   inputValueWrapper.simulate('change', { currentTarget: { value: 'foo' } });
