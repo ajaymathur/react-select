@@ -11,8 +11,8 @@ const { Option } = components;
 const BASIC_PROPS = {
   components,
   backspaceRemovesValue: true,
-  blurInputOnSelect: jest.fn(),
-  captureMenuScroll: jest.fn(),
+  blurInputOnSelect: false,
+  captureMenuScroll: true,
   closeMenuOnSelect: true,
   escapeClearsValue: false,
   filterOption: jest.fn(),
@@ -43,11 +43,11 @@ const BASIC_PROPS = {
   pageSize: 5,
   placeholder: 'Select...',
   screenReaderStatus: ({ count }: { count: number }) => `${count} result${count !== 1 ? 's' : ''} available.`,
-  scrollMenuIntoView: jest.fn(),
+  scrollMenuIntoView: false,
   styles: {},
   tabSelectsValue: true,
   value: [],
-}
+};
 
 test('defaults - snapshot', () => {
   const tree = mount(<Async {...BASIC_PROPS}/>);
@@ -121,7 +121,7 @@ cases('load options props with', ({ props, expectloadOptionsLength }) => {
  */
 test.skip('to not call loadOptions again for same value when cacheOptions is true', () => {
   let loadOptionsSpy = jest.fn();
-  const props = {...BASIC_PROPS, loadOptions: loadOptionsSpy, cacheOptions: true};
+  const props = { ...BASIC_PROPS, loadOptions: loadOptionsSpy, cacheOptions: true };
   let asyncSelectWrapper = mount(<Async {...props} />);
   let inputValueWrapper = asyncSelectWrapper.find('div.react-select__input input');
 
@@ -139,7 +139,7 @@ test.skip('to not call loadOptions again for same value when cacheOptions is tru
 });
 
 test('to create new cache for each instance', () => {
-  const props = {...BASIC_PROPS, cacheOptions: true};
+  const props = { ...BASIC_PROPS, cacheOptions: true };
   const asyncSelectWrapper = mount(<Async {...props} />);
   const instanceOne = asyncSelectWrapper.instance();
 
@@ -152,7 +152,7 @@ test('to create new cache for each instance', () => {
 test('in case of callbacks display the most recently-requested loaded options (if results are returned out of order)', () => {
   let callbacks = [];
   const loadOptions = (inputValue, callback) => { callbacks.push(callback); };
-  const props = {...BASIC_PROPS, loadOptions, menuIsOpen: true};
+  const props = { ...BASIC_PROPS, loadOptions, menuIsOpen: true };
   let asyncSelectWrapper = mount(<Async {...props} />);
   let inputValueWrapper = asyncSelectWrapper.find('div.react-select__input input');
   asyncSelectWrapper.setProps({ inputValue: 'foo' });
@@ -170,8 +170,9 @@ test('in case of callbacks display the most recently-requested loaded options (i
  * This throws a jsdom exception
  */
 test.skip('in case of callbacks should handle an error by setting options to an empty array', () => {
+  // $FlowFixMe
   const loadOptions = (inputValue, callback) => { callback(new Error('error')); };
-  const props = {...BASIC_PROPS, loadOptions};
+  const props = { ...BASIC_PROPS, loadOptions };
   let asyncSelectWrapper = mount(<Async {...props} />);
   let inputValueWrapper = asyncSelectWrapper.find('div.react-select__input input');
   asyncSelectWrapper.setProps({ inputValue: 'foo' });
